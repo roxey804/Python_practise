@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 21 14:14:35 2019
+
+@author: rnikoo
+"""
+
+unsupported operand type(s) for +: 'builtin_function_or_method' and 'str'
+
+try: adding brackets to the method e.g. myvar.method()
+
+-----------------------------------
+
+method() takes 0 positional arguments but 2 were given
+
+your method has no arguments e.g. mymethod(): but then you specify some variables in the function, make sure to add them beforehand or *args to your method
+
+e.g. 
+    def mymethod():
+        result = a + b
+        return result
+    
+        def mymethod_correct(a,b):
+            result = a + b
+            return result
+    
+        
+        def mymethod_correct2(*args):
+            result = a + b
+            return result
+see https://realpython.com/python-kwargs-and-args/ for more info on args and kwargs
