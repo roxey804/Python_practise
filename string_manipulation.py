@@ -54,5 +54,10 @@ def split_sentence(sentence):
 
 split_sentence("split me")
 
-#
+#--------------REVERSING a string---------------#
+
+#uses string slicing 
+
+def solution(string):
+    return string[::-1]  
     
