@@ -1,37 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Oct 21 14:08:13 2019
-
-@author: rnikoo
+There are a number of ways of formatting and presenting strings in python
+1- .format
+2- f strings (preferred in versions 3.6 and higher)
 """
-#-----Option 1 str.format()-----#
-
-name = "jo"
-age = 12
-
-print("my name is {} and i'm {} years old".format(name,age))
-
-
-# downside- can be quite verbose when you have multiple variables .format(var1,var2,var3...etc)
-
-
-#-----Option 2 f-strings-----#
-#see https://realpython.com/python-f-strings/#old-school-string-formatting-in-python
-
-name = "rox"
-age = 26
-
-#F strings can be used with f or F, 
-print(f"hi i'm {name} and {age}")
-
-def fstrings_practise():
-    name = input("what's your name?")
-    age = input("how old are you?")
-    print(f"Hi {name.title()}, nice to meet you!")
-    
-fstrings_practise()
-    
-
+import time
 
 #Define your variables
 
@@ -51,13 +24,41 @@ def fullname(first_name, last_name):
 #Call the function with your arguments
 fullname("john", "Brown")
 
-
 #Now a superior version of fullname function automatically capitalising the name
 def fullname_v2(*args):
     full_name = first_name.title() + " " + last_name.title()
     print(full_name)
 
 fullname_v2("john", "Brown")
+
+#-----Option 1 str.format()-----#
+
+name = "jo"
+age = 12
+
+print("my name is {} and i'm {} years old".format(name,age))
+
+# downside- can be quite verbose when you have multiple variables .format(var1,var2,var3...etc)
+
+#-----Option 2 f-strings-----#
+#see https://realpython.com/python-f-strings/#old-school-string-formatting-in-python
+
+name = "rox"
+age = 26
+
+#F strings can be used with f or F, 
+print(f"hi i'm {name} and {age}")
+
+def fstrings_practise():
+    name = input("what's your name?")
+    age = input("how old are you?")
+    time.sleep(1)
+    print(f"Hi {name.title()}, nice to meet you!")
+    time.sleep(1)
+    
+#fstrings_practise()
+    
+
 
 #--------------String INDEXING---------------#
 
@@ -77,11 +78,24 @@ print(word_slice)
 mystring="abacus will split"
 print(mystring.split()) #will split tge word into its respective words
 
-def split_sentence(sentence):
-    split = sentence.split()
-    return split
+# def split_sentence(sentence):
+#     split = sentence.split()
+#     return split
 
-split_sentence("split me")
+# split_sentence("split me")
 
-#
-    
+def split_sentence():
+    word = "aba cus"
+    print(word.split())
+
+split_sentence()
+
+#-----SPLIT string using *args---------#
+def split_sentence2(*args):
+    for arg in args:
+        result = arg.split()
+    print(result)
+
+mywords = "abra cadabra"
+word2 = "bobbi brown"
+split_sentence2(mywords, word2)
