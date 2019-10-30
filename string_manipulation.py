@@ -4,6 +4,35 @@ Created on Mon Oct 21 14:08:13 2019
 
 @author: rnikoo
 """
+#-----Option 1 str.format()-----#
+
+name = "jo"
+age = 12
+
+print("my name is {} and i'm {} years old".format(name,age))
+
+
+# downside- can be quite verbose when you have multiple variables .format(var1,var2,var3...etc)
+
+
+#-----Option 2 f-strings-----#
+#see https://realpython.com/python-f-strings/#old-school-string-formatting-in-python
+
+name = "rox"
+age = 26
+
+#F strings can be used with f or F, 
+print(f"hi i'm {name} and {age}")
+
+def fstrings_practise():
+    name = input("what's your name?")
+    age = input("how old are you?")
+    print(f"Hi {name.title()}, nice to meet you!")
+    
+fstrings_practise()
+    
+
+
 #Define your variables
 
 first_name = "Monty"
@@ -54,10 +83,5 @@ def split_sentence(sentence):
 
 split_sentence("split me")
 
-#--------------REVERSING a string---------------#
-
-#uses string slicing 
-
-def solution(string):
-    return string[::-1]  
+#
     
