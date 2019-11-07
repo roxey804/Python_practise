@@ -2,24 +2,35 @@
 """
 Python lists are a combination of heterogenous elements e.g. a mixture of ints, strings and more lists!
 """
-
 #----------------------LISTS----------------#
 
-#-------------Adding to a list------------#
+
 list1 = [1,2,3]
 print("list1:", list1)
 list2 = ["a", "b"]
 print("list2:", list2)
+
+#-------------Adding to a list------------#
 
 list3 = list1 + list2
 print("list3", list3)
 
 #This adds the lists in order
 
+
+#list4 = list3 + 2
+#print("list4:", list4)
+
+#TypeError: This will not work as you cannot add ints to a list "can only concatenate list (not "int") to list"
+
+
 #-------------Appending or inserting items------------#
 
 #use the append() method to add items to the end of the list
-
+#The append() method adds a single item to the existing list. It doesn't return a new list; rather it modifies the original list.
+list4=[0]
+list5 = list4.append(2)
+print("list4: ",list4)
 #use insert() method to insert items to a specified position 
 
 # e.g.: insert(index, item)
@@ -27,7 +38,7 @@ print("list3", list3)
 list3.insert(0,99)  #inserts 99 to the 0th index
 print(list3)
 
-#-------------Sorting------------#
+print("\n")#-------------Sorting------------#
 
 # .sort()   or  sorted()
 
@@ -49,7 +60,8 @@ print("another list:", another_list)
 print("sorted(another_list):", sorted(another_list))
 print("another list:", another_list, " (it's back to the original)")
 
-#-------------Split list to int------------#
+print("\n")#-------------Split list to int------------#
+
 
 def list_to_int():
     mylist = [5,2,1]
@@ -70,8 +82,22 @@ def list_to_int_addition():
 
 list_to_int_addition()      
 
+#---------List comprehensions-----------#
 
+#[ expression for item in list if conditional ]
+#This is equivalent to:
 
+#for item in list:
+#    if conditional:
+#        expression
+        
+def list_comprehension():
+    old_list = [5,2,1]
+    new_list= [i+1 for i in old_list]
+    print("old list:", old_list)
+    print("new list:", new_list)
+
+list_comprehension()
 
 def list_int_to_string():
     old_list = [5,2,1]
