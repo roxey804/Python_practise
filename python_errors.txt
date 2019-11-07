@@ -29,3 +29,7 @@ e.g.
             result = a + b
             return result
 see https://realpython.com/python-kwargs-and-args/ for more info on args and kwargs
+        
+------------Value Errors---------------------      
+                  
+ValueError: invalid literal for int() with base 10: '['
