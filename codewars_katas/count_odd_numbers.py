@@ -1,4 +1,4 @@
-'''Given a number n, return the number of positive odd numbers below n, EASY!
+'''Given a number n, return the number of positive odd numbers below n, 
 
 oddCount(7) //=> 3, i.e [1, 3, 5]'''
 
@@ -18,11 +18,10 @@ def odd_count(n):
             mylist.append(condition)
             condition +=2
         return len(mylist)
-    
-        print(mylist)
-        print("number of positive odd numbers below n:", len(mylist))
-    
+
 odd_count(7)
+
+#-------------------------#
 
 
 def odd_count_spyder(n):
