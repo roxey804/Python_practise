@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import time as t
+
 """
 Python lists are a combination of heterogenous elements e.g. a mixture of ints, strings and more lists!
 """
@@ -10,8 +12,20 @@ print("list1:", list1)
 list2 = ["a", "b"]
 print("list2:", list2)
 
-#-------------Adding to a list------------#
+print("Accessing items in a list:")
+t.sleep(2)
 
+#-------------Accessing items in a list------------#
+list2 = ["a","b","c"]
+#for the first (0th index) item do:
+list2[0]
+#List of lists
+list_of_lists = [[["a","b","c"]],[1,2,3]]
+print(list_of_lists[0][0],list_of_lists[1][0])
+
+#-------------Adding to a list------------#
+print("Adding items to a list:")
+t.sleep(2)
 list3 = list1 + list2
 print("list3", list3)
 
@@ -38,6 +52,21 @@ print("list4: ",list4)
 list3.insert(0,99)  #inserts 99 to the 0th index
 print(list3)
 
+
+#-----------Removing from a list -----------------#
+print("\n","Removing items from a list")
+
+list6 = [2,3,4,55,6]
+print(list6)
+
+print("using the .remove attribute")
+#.remove(x)
+#this removes x from the list, if there are multipe, it will remove the FIRST instance of x
+list6.remove(55)
+
+print("using the del() method")
+#.remove(x)
+print(list6)
 print("\n")#-------------Sorting------------#
 
 # .sort()   or  sorted()
