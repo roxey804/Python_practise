@@ -3,6 +3,8 @@ import time as t
 
 """
 Python lists are a combination of heterogenous elements e.g. a mixture of ints, strings and more lists!
+
+-Lists always start with an index of 0 with the last element being index -1
 """
 #----------------------LISTS----------------#
 
@@ -23,7 +25,8 @@ list2[0]
 list_of_lists = [[["a","b","c"]],[1,2,3]]
 print(list_of_lists[0][0],list_of_lists[1][0])
 
-#-------------Adding to a list------------#
+#the LAST item can always be accessed using mylist[-1] or len(mylist) -1
+#-------------Adding to a list or concatenating multiple lists------------#
 print("Adding items to a list:")
 t.sleep(2)
 list3 = list1 + list2
@@ -42,9 +45,11 @@ print("list3", list3)
 
 #use the append() method to add items to the end of the list
 #The append() method adds a single item to the existing list. It doesn't return a new list; rather it modifies the original list.
+#Example: .append(int) or .append("string") or .append(another_list)
 list4=[0]
 list5 = list4.append(2)
 print("list4: ",list4)
+
 #use insert() method to insert items to a specified position 
 
 # e.g.: insert(index, item)
@@ -64,9 +69,15 @@ print("using the .remove attribute")
 #this removes x from the list, if there are multipe, it will remove the FIRST instance of x
 list6.remove(55)
 
+#del(x) removes the item with INDEX x
 print("using the del() method")
-#.remove(x)
+
+'''del(mylist[index_of_item_2b_removed])'''
+
 print(list6)
+
+#The .clear() clears the list from all its items
+
 print("\n")#-------------Sorting------------#
 
 # .sort()   or  sorted()
