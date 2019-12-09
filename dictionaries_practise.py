@@ -69,7 +69,10 @@ def return_kv_pairs():
 #or def print_kv_pairs():
     #for key,val in mydict.items():
         #print(key, val)
-        
+def return_kv_pairs_2():
+    for k,v in dict.items():
+    print("key",k+"val",v)  
+    
 #------------Searching in a dictionary------------------------#
 
 def get_value_for_key():

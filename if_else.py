@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+import time
+
 """
 -Simple if/else statements
 -Ternary (one line) conditionals
@@ -89,6 +90,19 @@ def conditionals_2():
     if mynum == 2 and result == True:
         print("passed")
 #conditionals_2()
+        
+time.sleep(1)
+
+print("Checking if we have an item in our list")
+
+holiday_bag=["passport","money","phone"]
+#Check if you've got your phone:
+
+if "money" in holiday_bag:
+    print("yes your money is in your holiday bag")
+    
+#or a one-liner type into Ipython:
+"money" in holiday_bag
 
 #---------------Ternary conditionals--------------#
 print("\n------Ternary conditionals--------")      

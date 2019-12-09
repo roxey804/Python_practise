@@ -150,9 +150,11 @@ def list_int_to_string():
 
 list_int_to_string()  
 
+#--------------List assignment------#
 
-#def split_list_to_int():
-#    mylist = [1,2,"3"]
-#    newlist = [int(d) for d in str(mylist)]
-#    print (newlist)
-#split_list_to_int()
+'''if you have 2 lists with the same object e.g. a=[1] and b=[1], they will NOT refer to the same object. they may have the same value (== equality operator would result in True) but is (which checks if they are the same object) would result in False. 
+see https://www.geeksforgeeks.org/difference-operator-python/'''
+
+lista=[1]
+listb=[1]
+listc=lista #this results in lista being THE SAME OBJECT as listc, hence, if you edit listc, lista will change too!
