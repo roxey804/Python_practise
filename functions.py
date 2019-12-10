@@ -160,10 +160,20 @@ def add_VAT(price):
 calculate_total_price = receipt
 print(calculate_total_price(2,3))
 
+#you can also assign a variable to the result of a function e.g. mondays_price = receipt(3,3) then print(mondays_price)
+
+#myvar = function(arg1,arg2)
+#print(myvar) - will run the function and print out the result :) 
+
+
 '''But you still musn't MISS ANY OUT.What if you have a func with variable no. of input vars?'''
 
+x=2
+y=print(x)
+print(type(y))
+#mportant to remember that assigning a variable y2 to a function that prints a value but does not return a value will result in that variable y2 being of type NoneType.
 
-    
+
     
     
     
