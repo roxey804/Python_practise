@@ -41,7 +41,7 @@ for num in numlist:
 #BUT 9 will not be found! hence, we need to use continue
 
 
-print("-------Continu keyword---------")
+print("-------Continue keyword---------")
 time.sleep(1)   
 #continue will skip execution of the remaining lines of code and go back to the if statement  
 
